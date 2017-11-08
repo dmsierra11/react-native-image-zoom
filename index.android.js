@@ -1,14 +1,15 @@
 
-import React,{Component,PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import {
   requireNativeComponent,
-  View,
+  ViewPropTypes,
 } from 'react-native';
 import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource';
 
 export default class ImageViewZoom extends Component {
   static propTypes = {
-    ...View.propTypes,
+    ...ViewPropTypes,
     source: PropTypes.oneOfType([
       PropTypes.shape({
         uri: PropTypes.string,
